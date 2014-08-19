@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".QuizActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:layout_gravity="center"
+        android:id="@+id/textView"
+        android:clickable="true"
+        android:onClick="nextClick"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_answer_false"
+            android:paddingRight="50dp"
+            android:paddingLeft="50dp"
+            android:id="@+id/falseBtn"
+            android:onClick="falseClick"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="@string/question_answer_true"
+            android:layout_height="wrap_content"
+            android:paddingRight="50dp"
+            android:paddingLeft="50dp"
+            android:id="@+id/trueBtn"
+            android:onClick="trueClick"
+            android:drawablePadding="4dp"
+            />
+
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="40dp">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/prevBtn"
+        android:onClick="prevClick"
+        android:drawableLeft="@drawable/leftarrow"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/nextBtn"
+        android:onClick="nextClick"
+        android:drawableRight="@drawable/arrowright"/>
+
+
+
+
+</LinearLayout>
+
+
+
+</LinearLayout>
