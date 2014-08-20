@@ -17,7 +17,7 @@ public class QuizActivity extends Activity {
     private Button nextBtn;
     private TextView textView;
 
-    private TrueFalse[] questionBank = new TrueFalse[]{
+    private TrueFalse[] questionBank = new TrueFalse[] {
             new TrueFalse(R.string.question_oceans, true),
             new TrueFalse(R.string.question_africa, false),
             new TrueFalse(R.string.question_americas, true),
@@ -28,6 +28,9 @@ public class QuizActivity extends Activity {
     private int currentIndex = 0;
 
     private void updateQuestion(){
+        if (currentIndex == -1 ){
+            currentIndex = questionBank.length - 1;
+        }
         int question = questionBank[currentIndex].getQuestion();
         textView.setText(question);
     }
