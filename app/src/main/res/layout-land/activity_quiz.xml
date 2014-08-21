@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,7 +6,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".QuizActivity">
 
 
@@ -14,17 +14,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="24dp"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/textView"
         android:clickable="true"
         android:onClick="nextClick"
+
 
         />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
         android:layout_marginTop="40dp">
 
         <Button
@@ -53,13 +55,14 @@
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:orientation="horizontal"
     android:layout_marginTop="40dp">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="bottom|left"
         android:id="@+id/prevBtn"
         android:onClick="prevClick"
         android:drawableLeft="@drawable/leftarrow"/>
@@ -67,9 +70,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="bottom|right"
         android:id="@+id/nextBtn"
         android:onClick="nextClick"
+
         android:drawableRight="@drawable/arrowright"/>
 
 
@@ -77,21 +81,6 @@
 
 </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
-
-    </LinearLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:id="@+id/cheat_button"
-        android:text="@string/cheat_button"
-        android:layout_gravity="right"
-        android:onClick="cheatButtonClick"/>
 
 
-</LinearLayout>
+</FrameLayout>
